@@ -5,7 +5,7 @@
       rgba($themeClrPrimary, 0.8),
       rgba($themeClrPrimary, 0.8)
     ),
-    url(../../assets/svg/common-bg.svg);
+    url(../assets/svg/common-bg.svg);
   background-position: center;
 
   height: 100vh;
@@ -49,10 +49,10 @@
     display: block;
     padding: 1.2rem;
     border-bottom: 2px solid #eee;
-    transition: background .3s;
+    transition: background 0.3s;
 
     &:hover {
-      background: rgba(#fff,.1);
+      background: rgba(#fff, 0.1);
     }
 
     &--bd-none {
@@ -152,7 +152,8 @@
     &-img {
       width: 100%;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
+      max-height: 500px;
     }
     &-content {
       padding: 2rem 0;
@@ -182,6 +183,10 @@
         @include respond(phone) {
           font-size: 1.7rem;
         }
+      }
+      &-link {
+        text-decoration: underline;
+        color: $themeClrPrimary;
       }
     }
   }
